@@ -14,7 +14,7 @@ pipeline {
       //  }
          stage ("mvn compile") {
             tools {
-               maven 'mmn3'
+               maven 'Mvn3'
              }
             steps {
                sh '''
