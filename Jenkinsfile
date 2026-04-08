@@ -18,12 +18,15 @@ pipeline {
              }
             steps {
                sh '''
-                 echo compile
+                 mvn compile
                '''
             }
          }
 
          stage("mvn package") {
+            tools {
+               maven 'Mvn3'
+             }
              steps {
 
                sh '''
