@@ -5,13 +5,13 @@ pipeline {
     }
     stages {
 
-       stage("Download Dependencies") {
-         steps {
-            sh '''
-            mvn clean
-            '''
-         }
-       }
+      //  stage("Download Dependencies") {
+      //    steps {
+      //       sh '''
+      //       mvn clean
+      //       '''
+      //    }
+      //  }
          stage ("mvn compile") {
             steps {
                sh '''
