@@ -11,6 +11,7 @@ pipeline {
             mvn clean
             '''
          }
+       }
          stage ("mvn compile") {
             steps {
                sh '''
@@ -27,7 +28,6 @@ pipeline {
                '''
              }
          }
-       }
         stage ('make artificats') {
          steps {
             sh '''
