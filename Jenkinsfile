@@ -37,7 +37,7 @@ pipeline {
         stage ('make artificats') {
          steps {
             sh '''
-            cp /target/*.jar users.jar
+            cp target/*.jar users.jar
             zip -r users.zip users.jar 
             '''
          }
