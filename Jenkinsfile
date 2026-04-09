@@ -3,6 +3,10 @@ pipeline {
 
     label "NODES"
     }
+     tools {
+               maven 'Mvn3'
+               java ""
+             }
     stages {
 
       //  stage("Download Dependencies") {
@@ -13,9 +17,7 @@ pipeline {
       //    }
       //  }
          stage ("mvn compile") {
-            tools {
-               maven 'Mvn3'
-             }
+           
             steps {
                sh '''
                  mvn compile
@@ -24,9 +26,7 @@ pipeline {
          }
 
          stage("mvn package") {
-            tools {
-               maven 'Mvn3'
-             }
+      
              steps {
 
                sh '''
@@ -45,7 +45,7 @@ pipeline {
      stage ('upload the Artifact to Nexus') {
         steps {
          sh'''
-            curl -v -u admin:nexus123 --upload-file users.zip  http://13.219.179.173:8081/repository/users/users.zip
+            curl -v -u admin:nexus123 --upload-file users.zip  http://13.222.207.100:8081/repository/users/users.zip
 
          '''
         }
