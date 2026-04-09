@@ -5,7 +5,7 @@ pipeline {
     }
      tools {
                maven 'Mvn3'
-               //java ""
+               jdk "Jdk"
              }
     stages {
 
