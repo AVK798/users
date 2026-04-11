@@ -60,6 +60,6 @@ todo (
 
    Service : 'users',
    Slave   : 'JAVA',
-   App_type: 'users'
+   App_type: 'Java'
 
 )
