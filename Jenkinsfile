@@ -56,7 +56,6 @@
 
 @Library('Todo-App') _
 todo (
-
    Service : 'users',
    Slave   : 'JAVA',
    App_type: 'Java'
