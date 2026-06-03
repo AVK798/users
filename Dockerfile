@@ -1,4 +1,4 @@
-FROM  eclipse-temurin:8-jdk
+FROM  maven:3-openjdk-8
 RUN mkdir -p /app/src
 WORKDIR /app
 COPY src src
