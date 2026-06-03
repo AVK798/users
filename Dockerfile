@@ -7,6 +7,6 @@ RUN mvn package
 
 
 
-FROM openjdk:8-jre-slim
+FROM eclipse-temurin:8-jre
 COPY --from=BUILD /app/target/users-1.0.jar  users.jar
 CMD ["java", "-jar", "users.jar"]
