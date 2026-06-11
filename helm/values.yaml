@@ -135,6 +135,25 @@ resources: {}
 #   failureThreshold: 30
 #   periodSeconds: 5
 
+startupProbe:
+  httpGet:
+    path: /users/health
+    port: http
+  failureThreshold: 30
+  periodSeconds: 5
+
+livenessProbe:
+  httpGet:
+    path: /users/health
+    port: http
+  periodSeconds: 10
+
+readinessProbe:
+  httpGet:
+    path: /users/health
+    port: http
+  periodSeconds: 5
+
 # livenessProbe:
 #   httpGet:
 #     path: /users/
