@@ -11,14 +11,21 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.LinkedList;
 import java.util.List;
 
+// @GetMapping("/health")
+// public String health() {
+//     return "UP";
+
+// }
 @RestController()
 @RequestMapping("/users")
 public class UsersController {
 
     @Autowired
     private UserRepository userRepository;
-
-
+    @GetMapping("/health")
+    public String health() {
+        return "UP";
+    }
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public List<User> getUsers() {
         List<User> response = new LinkedList<>();
